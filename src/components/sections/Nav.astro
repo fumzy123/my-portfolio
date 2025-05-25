@@ -1,0 +1,70 @@
+---
+
+---
+
+<header>
+    <div>
+        <p>FUMEZ</p>
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Store</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    /* 
+     * flexbox layout for the header
+     * 
+     */
+    header {
+        /* Box Model */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        /* Layout */
+        display: flex;
+        justify-content: center;
+
+        /* Position */
+        /* 
+            * Acts as relatively positioned element
+            * but it will stick to the top of the screen once it reaches that position while scrolling.
+            * 
+         */
+        position: sticky;
+        top: 2rem;
+    }
+
+    header div {
+        /* Box Model */
+        width: fit-content;
+        padding: 0.5em;
+        border: 1px solid white;
+        border-radius: 12px;
+
+        /* Background */
+        background-color: var(--color-primary);
+
+        /* Layout */
+        display: flex;
+        align-items: last baseline;
+        gap: 2rem;
+    }
+
+    nav ul {
+        /* Box Model */
+        /* border: 2px solid red; */
+
+        /* Layout */
+        display: flex;
+        gap: 2em;
+
+        /* List Styling */
+        list-style: none;
+    }
+</style>
