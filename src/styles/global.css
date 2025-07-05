@@ -1,6 +1,31 @@
 /** Globally Accessible CSS Variables **/
 :root {
   /* Colors */
+  
+
+  /* Brand Color */
+  --brand: #f3dfbf;
+
+  /* Background Color */
+  --background-clr: #17181C;
+
+  /* Typography Color */
+  --grey-50: #f3f5f7;
+  --grey-100: #d9dfe7;
+  --grey-200: #c6d0db;
+  --grey-300: #adbbcb;
+  --grey-400: #9dadc1;
+  --grey-500: #8499b1;
+  --grey-600: #788ba1;
+  --grey-700: #5e6d7e;
+  --grey-800: #495461;
+  --grey-900: #37404a;
+
+  
+  
+
+
+
   /* Dominant */
   --clr-eerie-black: #17181cff;
 
@@ -9,7 +34,8 @@
   --clr-slate400: #94a3b8;
   --clr-shade-dutch-white: rgb(121, 111, 95);
 
-  /* Accent */
+  
+  /* Accent Color */
   --clr-dutch-white: #f3dfbfff;
   --clr-cordovan: #8e4a49ff;
   --clr-steel-blue: #2d82b7ff;

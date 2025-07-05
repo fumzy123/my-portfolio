@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+    <h1 class="container title">Components / Design System</h1>
+
+    <section class="color container flex">
+        <h2>Colors</h2>
+
+        <div class="brand">
+            <p class="brand_title">Brand:</p>
+            <div class="brand_color color_style"></div>
+        </div>
+
+        <div>
+            <p>Background:</p>
+            <div class="background_color color_style"></div>
+        </div>
+
+        <div>
+            <p>Typography:</p>
+            <div class="flex-row">
+                <div class="primary-text color_style"></div>
+                <div class="secondary-text color_style"></div>
+                <div class="tertiary-text color_style"></div>
+            </div>
+        </div>
+
+        <p>Background</p>
+    </section>
+
+    <section class="typography container flex">
+        <h2>Typography</h2>
+    </section>
+
+    <section class="icon container flex">
+        <h2>Icon</h2>
+    </section>
+
+    <section class="components container flex">
+        <h2>Components</h2>
+        <h3>Buttons</h3>
+    </section>
+</BaseLayout>
+
+<style>
+    .title {
+        padding-bottom: 0.7em;
+        border-bottom: 2px dashed var(--clr-slate600);
+    }
+
+    .color_style {
+        /*  Box */
+        width: 45px;
+        height: 45px;
+        border: 2px solid var(--grey-900);
+        border-radius: 50%;
+    }
+
+    .brand_color {
+        /* Color */
+        background-color: var(--brand);
+    }
+
+    .background_color {
+        background-color: var(--background-clr);
+    }
+
+    .flex {
+        /* Layout */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .primary-text {
+        background-color: var(--grey-200);
+    }
+
+    .secondary-text {
+        background-color: var(--grey-500);
+    }
+
+    .tertiary-text {
+        background-color: var(--grey-800);
+    }
+</style>
