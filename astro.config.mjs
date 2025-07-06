@@ -1,8 +1,5 @@
 import { defineConfig } from 'astro/config';
 
-// Import Frameworks
-import react from '@astrojs/react';
-
 // Impore Vite Plugins
 import basicSsl from '@vitejs/plugin-basic-ssl';
 import { loadEnv } from 'vite';
@@ -10,21 +7,19 @@ import { loadEnv } from 'vite';
 
 // Import packages for integration to Astro Project
 import icon from 'astro-icon';
-import mdx from '@astrojs/mdx';
+
+
+import react from '@astrojs/react';
 
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    icon({
-      iconDir: 'src/assets/icons',
-      include: {
-        mdi: ['*'],
-      },
-    }),
-    mdx(),
-    react(),
-  ],
+  integrations: [icon({
+    iconDir: 'src/assets/icons',
+    include: {
+      mdi: ['*'],
+    },
+  }), react()],
 
   vite: {
     plugins: [basicSsl()],
