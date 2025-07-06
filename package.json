@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/react": "^4.3.0",
     "@iconify-json/mdi": "^1.1.64",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "astro": "^5.11.0",
     "astro-icon": "^1.1.0",
-    "framer-motion": "^10.18.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "vite": "^5.2.9"

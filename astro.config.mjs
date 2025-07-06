@@ -7,9 +7,8 @@ import { loadEnv } from 'vite';
 
 // Import packages for integration to Astro Project
 import icon from 'astro-icon';
-
-
 import react from '@astrojs/react';
+import mdx from '@astrojs/mdx';
 
 
 // https://astro.build/config
@@ -19,7 +18,7 @@ export default defineConfig({
     include: {
       mdi: ['*'],
     },
-  }), react()],
+  }), react(), mdx()],
 
   vite: {
     plugins: [basicSsl()],
