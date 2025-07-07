@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+// Conte
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('philosophy');
+console.log(posts);
+---
+
+<BaseLayout>
+    <h1>My posts</h1>
+    <ul>
+        {
+            posts.map((post) => (
+                <li>
+                    <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</BaseLayout>
