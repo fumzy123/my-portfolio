@@ -1,0 +1,32 @@
+---
+// Utility
+import { getCollection, render } from 'astro:content';
+
+// Components
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+export async function getStaticPaths() {
+    // Get a collection
+    const philosophyCollection = await getCollection('philosophy');
+
+    // Combine all collections into one array
+    const allPosts = philosophyCollection;
+
+    // For every entry in the collection
+    const paths = allPosts.map((post) => ({
+        params: { id: post.id },
+        props: { post },
+    }));
+
+    // Return an Array of Collections
+    return paths;
+}
+
+const { id } = Astro.params;
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPostLayout frontmatter={post.data}>
+    <Content />
+</BlogPostLayout>
